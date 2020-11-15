@@ -23,10 +23,10 @@ export default ({ navigation }) => {
   const [age, setAge] = useState();
   const [photo, setPhoto] = useState();
   const handleEdit = () => {
-    console.log({firstName})
-    dispatch(editContact({ firstName, lastName, age, photo }));
+    console.log({ firstName, lastName, age, photo });
+    dispatch(editContact(contact.id,{ firstName, lastName, age, photo }));
     dispatch(getContacts());
-    // navigation.navigate("Home");
+    navigation.navigate("Home");
   };
   useEffect(() => {
     console.log({ firstName, lastName, age, photo });

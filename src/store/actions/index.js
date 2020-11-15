@@ -61,8 +61,8 @@ export const deleteContact = (id) => {
 };
 
 export const editContact = (id, editData) => {
-  const dataEdit = JSON.stringify(editData)
   return async (dispatch) => {
+    const dataEdit = JSON.stringify(editData)
     const res = await fetch(`${URL}/${id}`, {
       method: "PUT",
       body: dataEdit,
